@@ -8,7 +8,7 @@ Course - M.Tech - CSIS (IInd Year)
 Files Required:
 
 input.csv: Input data file will be a comma separated (.csv) file, containing one transaction 
-per line. The location of the input file will be against the key “input” in the config file. 
+per line. The location of the input file will be against the key input in the config file. 
  
 output.csv: The final output of frequent itemsets and association rules are written in the 
 output file provided in config.csv file.
@@ -189,6 +189,7 @@ def input_information(fname):
 #The main function
 if __name__ == "__main__":
     inputfilename, outputfilename, support, confidence, flag = read_config_file()
+    
     transaction_information, count = input_information(inputfilename)
     transaction_information_length = len(transaction_information)
     support_final = ((float(support) * float(count)))
