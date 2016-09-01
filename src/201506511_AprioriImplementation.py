@@ -32,6 +32,7 @@ import sys
 from itertools import chain, combinations
 from collections import defaultdict
 import math
+import os.path
 import csv
 
 #Reading the configuration file
@@ -136,7 +137,7 @@ def tupletostring(tup):
 
 #Writing to output file
 def gettingoutput(items, rules, outputfilename, flag):
-    f = open(outputfilename, "w")
+    f = open(outputfilename, "w+")
     
     #Writing Frequent ItemSets
     f.write(str(len(items)))
@@ -188,8 +189,7 @@ def input_information(fname):
 
 #The main function
 if __name__ == "__main__":
-    inputfilename, outputfilename, support, confidence, flag = read_config_file()
-    
+    inputfilename, outputfilename, support, confidence, flag = read_config_file()   
     transaction_information, count = input_information(inputfilename)
     transaction_information_length = len(transaction_information)
     support_final = ((float(support) * float(count)))
