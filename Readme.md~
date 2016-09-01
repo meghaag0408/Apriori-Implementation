@@ -44,7 +44,7 @@ The code runs in 0.551 sec for a sample 10 MB dataset with 1 lac plus transactio
 
 Scalability:
 The code is scalable to large dataset. The entire file is not saved in memory rather the 
-required information is fetched from the file, while reading it. Hence the code is space
+required information is fetched from the file, while reading it.Hence the code is space
 efficient as well.
 
 *********************************************************************************************
